@@ -29,3 +29,5 @@ class TicTacToeGame:
             return self.playerO
         if player.get_player_type() == "O":
             return self.playerX
+
+
