@@ -2,10 +2,11 @@ from game.Board import Board
 from game.TicTacToeGame import TicTacToeGame
 from game.player.EasyPlayer import EasyPlayer
 from game.player.UserPlayer import UserPlayer
+from game.player.medium_player import MediumPlayer
 
 
 def check_input(some_input):
-    possible_input = ["user", "easy"]
+    possible_input = ["user", "easy", "medium"]
     try:
         g_mode = some_input.split()
         if len(g_mode) == 1 and g_mode[0] == "exit":
@@ -27,6 +28,8 @@ def build_player(player_class, player_type, board):
         return UserPlayer(player_type, board)
     if player_class == "easy":
         return EasyPlayer(player_type, board)
+    if player_class=="medium":
+        return MediumPlayer(player_type, board)
 
 
 def main():
