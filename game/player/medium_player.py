@@ -77,3 +77,5 @@ class MediumPlayer(BasePlayer):
                     board.update_cell(x, y, player)
                     not_valid = False
  #how to replace the last part with EasyPlayer move?
+
+
