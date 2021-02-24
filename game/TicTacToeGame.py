@@ -1,9 +1,9 @@
 class TicTacToeGame:
     def __init__(self, board, playerX, playerO):
-        if playerX.get_player_type() != "X":
-            raise Exception
-        if playerO.get_player_type() != "O":
-            raise Exception
+        #if playerX.get_player_type() != "X":
+            #raise Exception
+        #if playerO.get_player_type() != "O":
+            #raise Exception
 
         self.board = board
         self.playerX = playerX
