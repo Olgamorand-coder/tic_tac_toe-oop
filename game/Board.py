@@ -9,6 +9,9 @@ class Board:
         self.cells.append(second_row)
         self.cells.append(third_row)
 
+
+
+
     def display_table(self):
         print("---------\n|", self.cells[0][0], self.cells[0][1], self.cells[0][2], "|")
         print("|", self.cells[1][0], self.cells[1][1], self.cells[1][2], "|")
@@ -70,4 +73,15 @@ class Board:
                 return False
         else:
             return True
+
+    def empty_indexies(self):
+        empty_cells=[]
+        for row in range (len(self.cells)):
+            for col in range (len(self.cells[row])):
+                if self.cells[row][col]=="_":
+                    empty_cells.append([row][col])
+        return empty_cells
+
+
+
 
