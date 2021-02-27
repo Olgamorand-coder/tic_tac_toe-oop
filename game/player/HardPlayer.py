@@ -26,7 +26,6 @@ class HardPlayer(BasePlayer):
 
 
         for move in avail_spots:
-
             new_board=deepcopy(b)
             new_board.update_cell(move[0], move[1], playerType)
             if playerType=="X":
@@ -50,9 +49,9 @@ class HardPlayer(BasePlayer):
     def make_move(self):
         board = super().get_board()
         player = super().get_player_type()
-        x, y=self.best_coord
+        self.best_coord=self.minimax(player, board)
 
-        board.update_cell(x, y, player)
+        board.update_cell(self.best_coord[0], self.best_coord[1], player)
 
 
 
